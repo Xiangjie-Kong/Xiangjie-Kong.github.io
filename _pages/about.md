@@ -18,4 +18,3 @@ Research Outcome
 Here's my latest research.
 ![](../images/paper1.jpg)
 
-
