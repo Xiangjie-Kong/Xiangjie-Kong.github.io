@@ -11,9 +11,11 @@ Kong is an undergraduate student in School of Computer Science and Technology / 
 
 Research status
 ======
-Kong is currently an undergraduate student in the Phase Field-Computational Fluids group led by [Prof. Yang Junxiang](https://cfdyang521.github.io/) from the School of Innovative Engineering, Macau University of Science and Technology. His research interests include **3D Volume Reconstruction** and **Scientific Computing**.
+Kong is currently an undergraduate student in the Phase Field-Computational Fluids team led by [Prof. Yang Junxiang](https://cfdyang521.github.io/) from the School of Innovative Engineering, Macau University of Science and Technology. His research interests include **3D Volume Reconstruction** and **Scientific Computing**.
 
 Research Outcome
 ======
 Here's my latest research.
-![latest paper](../images/paper1.jpg)
+![](../images/paper1.jpg)
+
+
