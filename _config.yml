@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "Xiangjie Kong / Personal Academic Site"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Xiangjie Kong / 孔祥杰"
   pronouns         : # example: "he/him"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Undergraduate student, FIE, Macau University of Science and Technology"
   location         : "Macao SAR, China"
   employer         : "Macau University of Science and Technology"
   uri              : # URL
