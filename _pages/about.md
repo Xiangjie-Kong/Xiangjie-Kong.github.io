@@ -18,6 +18,7 @@ Research Outcome
 Here's my latest research.
 
 ![](/images/paper1.png)
+(link to paper)[https://doi.org/10.1016/j.cnsns.2025.108649]
 
 ***Two lower boundedness-preservity auxiliary variable methods for a phase-field model of 3D narrow volume reconstruction*** was accepted by ***Communications in Nonlinear Scienceand Numerical Simulation***, a JCR Q1 top 10% journal, and Kong was the first author of the paper.
 
