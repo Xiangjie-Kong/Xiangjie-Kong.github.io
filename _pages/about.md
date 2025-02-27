@@ -21,4 +21,6 @@ Here's my latest research.
 
 ***Two lower boundedness-preservity auxiliary variable methods for a phase-field model of 3D narrow volume reconstruction*** was accepted by ***Communications in Nonlinear Scienceand Numerical Simulation***, a JCR Q1 top 10% journal, and Kong was the first author of the paper.
 
+In this paper, corresponding author **Prof. Junxiang Yang** proposed the numerical method, and **Kong** contributed all the numerical tests and paper writing as the first author.
 
+We Proposed 
