@@ -16,6 +16,6 @@ Kong is currently an undergraduate student in the Phase Field-Computational Flui
 Research Outcome
 ======
 Here's my latest research.
-<br/><img src='/images/dMarch.png'>
+<br/><img src='../images/paper1.jpg'>
 
 
