@@ -20,7 +20,7 @@ Work experience
   * Duties includes: Metadata Extraction from EHR Scripts, Graph Database Creation, Front-end Design and Development, Disrupt the order of data inside csv files
 
 * June 2023– Aug 2023: Software Engineer Intern
-  * Shandong Taiwei Digital Software Co., Shandong
+  * [Shandong Taiwei Digital Software Co.](http://www.twrj.net/), Shandong
   * Duties included: Low Code Developement, Designed software through the YIDA platform in Alibaba’s DingTalk software
   
 Skills
