@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Kong is an undergraduate student in School of Computer Science and Technology / Faculty of Innovation Engineering at Macau University of Science and Technology (MUST. 澳門科技大學). 
+Kong is an undergraduate student in School of Computer Science and Technology / Faculty of Innovation Engineering at [Macau University of Science and Technology (MUST. 澳門科技大學)](https://www.must.edu.mo/).
 
 Research status
 ======
