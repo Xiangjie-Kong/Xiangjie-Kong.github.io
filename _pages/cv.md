@@ -25,12 +25,8 @@ Work experience
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Coding Languages: C++, C, Latex, Python, MATLAB, Html
+* Technologies: Vscode, MATLAB, Pycharm, Colab, Vue.js, Node.js
 
 Publications
 ======
