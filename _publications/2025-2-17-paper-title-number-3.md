@@ -1,14 +1,10 @@
 ---
-title: "Paper Title Number 3"
+title: "Two lower boundedness-preservity auxiliary variable methods for a phase-field model of 3D narrow volume reconstruction"
 collection: publications
 category: manuscripts
-permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'This paper is about the number 3. The number 4 is left for future work.'
-date: 2015-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2015). &quot;Paper Title Number 3.&quot; <i>Journal 1</i>. 1(3).'
+permalink: /publication/2024-12-17-paper-title-number-4
+date: 2025-2-17
+venue: 'Communications in Nonlinear Science and Numerical Simulation'
+paperurl: "http://dx.doi.org/10.1016/j.cnsns.2025.108649"
+citation: 'Kong, X., Gao, R., Fu, B., Cai, D., & Yang, J. (2025). Two lower boundedness-preservity auxiliary variable methods for a phase-field model of 3D narrow volume reconstruction. Communications in Nonlinear Science and Numerical Simulation, 108649.'
 ---
-
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
