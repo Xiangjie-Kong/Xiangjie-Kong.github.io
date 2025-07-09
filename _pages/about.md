@@ -26,11 +26,46 @@ In this paper, corresponding author **Prof. Junxiang Yang** proposed the numeric
 
 ---
 
-<div align="center" style="margin-top: 50px;">
-  <span id="busuanzi_container_site_pv" style="font-size: 14px;">
-    Total Visits: <span id="busuanzi_value_site_pv" style="font-weight: bold;"></span>
-  </span>
-  <span id="busuanzi_container_site_uv" style="margin-left: 20px; font-size: 14px;">
-    Unique Visitors: <span id="busuanzi_value_site_uv" style="font-weight: bold;"></span>
-  </span>
+<style>
+@keyframes stripe-animation {
+  0% { background-position: 0 0; }
+  100% { background-position: 30px 0; }
+}
+
+.stat-container {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 0 10px;
+  position: relative;
+  background: linear-gradient(45deg, 
+    transparent 0%,
+    transparent 45%,
+    rgba(0,0,0,0.1) 45%,
+    rgba(0,0,0,0.1) 55%,
+    transparent 55%,
+    transparent 100%
+  );
+  background-size: 30px 100%;
+  animation: stripe-animation 1s linear infinite;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stats-wrapper {
+  margin-top: 50px;
+  text-align: center;
+}
+</style>
+
+<div class="stats-wrapper">
+  <div class="stat-container">
+    <span id="busuanzi_container_site_pv" style="font-size: 14px;">
+      Total Visits: <span id="busuanzi_value_site_pv" style="font-weight: bold;"></span>
+    </span>
+  </div>
+  <div class="stat-container">
+    <span id="busuanzi_container_site_uv" style="font-size: 14px;">
+      Unique Visitors: <span id="busuanzi_value_site_uv" style="font-weight: bold;"></span>
+    </span>
+  </div>
 </div>
