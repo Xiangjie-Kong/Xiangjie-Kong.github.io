@@ -28,9 +28,9 @@ In this paper, corresponding author **Prof. Junxiang Yang** proposed the numeric
 
 <div align="center" style="margin-top: 50px;">
   <span id="busuanzi_container_site_pv" style="font-size: 14px;">
-    总访问量: <span id="busuanzi_value_site_pv" style="font-weight: bold;"></span> 次
+    Total Visits: <span id="busuanzi_value_site_pv" style="font-weight: bold;"></span>
   </span>
   <span id="busuanzi_container_site_uv" style="margin-left: 20px; font-size: 14px;">
-    访客数: <span id="busuanzi_value_site_uv" style="font-weight: bold;"></span> 人
+    Unique Visitors: <span id="busuanzi_value_site_uv" style="font-weight: bold;"></span>
   </span>
 </div>
