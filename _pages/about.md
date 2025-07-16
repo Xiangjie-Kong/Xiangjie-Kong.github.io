@@ -55,17 +55,65 @@ In this paper, corresponding author **Prof. Junxiang Yang** proposed the numeric
   margin-top: 50px;
   text-align: center;
 }
+
+.loading {
+  color: #999;
+  font-style: italic;
+}
 </style>
 
 <div class="stats-wrapper">
   <div class="stat-container">
-    <span id="busuanzi_container_site_pv" style="font-size: 14px;">
+    <span id="busuanzi_container_site_pv" style="font-size: 14px; display: none;">
       Total Visits: <span id="busuanzi_value_site_pv" style="font-weight: bold;"></span>
     </span>
+    <span id="pv_loading" class="loading" style="font-size: 14px;">Loading visits...</span>
   </div>
   <div class="stat-container">
-    <span id="busuanzi_container_site_uv" style="font-size: 14px;">
+    <span id="busuanzi_container_site_uv" style="font-size: 14px; display: none;">
       Unique Visitors: <span id="busuanzi_value_site_uv" style="font-weight: bold;"></span>
     </span>
+    <span id="uv_loading" class="loading" style="font-size: 14px;">Loading visitors...</span>
   </div>
 </div>
+
+<script>
+// 等待不蒜子加载完成
+function waitForBusuanzi() {
+  let attempts = 0;
+  const maxAttempts = 50; // 最多等待5秒
+  
+  const checkBusuanzi = () => {
+    attempts++;
+    
+    // 检查是否有数据加载
+    const pvElement = document.getElementById('busuanzi_value_site_pv');
+    const uvElement = document.getElementById('busuanzi_value_site_uv');
+    
+    if (pvElement && uvElement && pvElement.textContent && uvElement.textContent) {
+      // 数据加载成功，显示统计数据
+      document.getElementById('busuanzi_container_site_pv').style.display = 'inline';
+      document.getElementById('busuanzi_container_site_uv').style.display = 'inline';
+      document.getElementById('pv_loading').style.display = 'none';
+      document.getElementById('uv_loading').style.display = 'none';
+    } else if (attempts < maxAttempts) {
+      // 继续等待
+      setTimeout(checkBusuanzi, 100);
+    } else {
+      // 加载超时，显示错误信息
+      document.getElementById('pv_loading').textContent = 'Failed to load';
+      document.getElementById('uv_loading').textContent = 'Failed to load';
+    }
+  };
+  
+  // 页面加载完成后开始检查
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', checkBusuanzi);
+  } else {
+    checkBusuanzi();
+  }
+}
+
+// 启动检查
+waitForBusuanzi();
+</script>
