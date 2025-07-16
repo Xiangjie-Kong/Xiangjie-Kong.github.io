@@ -13,6 +13,10 @@ Education
 ======
 * B.S. in Computer Science, Macau University of Science and Technology, 2022
 
+Awards
+======
+*  Dean’s Honor List,  2023/2024 semester
+
 Intern experience
 ======
 * June 2024– Sep 2024: Software Engineer Intern
