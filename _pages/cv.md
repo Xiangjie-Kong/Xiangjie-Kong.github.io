@@ -15,7 +15,7 @@ Education
 
 Awards
 ======
-*  Dean’s Honor List,  2023/2024 semester
+*  **Dean’s Honor List**,  2023/2024 semester
 
 Intern experience
 ======
