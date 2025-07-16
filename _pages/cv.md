@@ -13,7 +13,7 @@ Education
 ======
 * B.S. in Computer Science, Macau University of Science and Technology, 2022
 
-Work experience
+Intern experience
 ======
 * June 2024– Sep 2024: Software Engineer Intern
   * [Inspur](https://www.inspur.com/)- intelligent healthcare, Shandong
