@@ -15,7 +15,9 @@ Education
 
 Awards
 ======
-*  **Dean’s Honor List**,  2023/2024 semester
+*  **Dean’s Honor List**,  2023/2024 academic year
+*  **2024 Tencent AI Arena Global Open Competition Intelligent Agent Gaming Algorithm Track [World Finals]–15th Place**,  December 2024
+*  **The 14th National College Students’ E-Commerce "Innovation, Creativity and Entrepreneurship" Challenge Competition [Provincial]–Second Prize**,  June 2024
 
 Intern experience
 ======
