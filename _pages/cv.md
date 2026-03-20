@@ -12,6 +12,7 @@ redirect_from:
 Education
 ======
 * B.S. in Computer Science, Macau University of Science and Technology, 2022
+* MPhil, Hong Kong University of Science and Technology (Guangzhou), 2026
 
 Awards
 ======
