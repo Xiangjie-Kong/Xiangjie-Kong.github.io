@@ -84,7 +84,7 @@
       text-align: center;
       text-decoration: none;
       color: var(--global-text-color-light);
-      border: 1px solid var(--global-border-color);
+      border: 1px solid var(var(--global-border-color));
       border-radius: 0;
 
       &:hover {
@@ -132,7 +132,7 @@
     text-align: center;
     text-decoration: none;
     color: var(--global-text-color-light);
-    border: 1px solid var(--global-border-color);
+    border: 1px solid var(var(--global-border-color));
     border-radius: $border-radius;
 
     &:hover {
@@ -175,17 +175,13 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  min-height: $masthead-height;
-  background: transparent;
+  background: var(--global-bg-color);
 
   a {
     display: block;
-    margin: 0 0.75rem;
-    padding: 1rem 0;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
     color: var(--global-masthead-link-color);
-    font-size: 0.92rem;
-    font-weight: 500;
-    letter-spacing: -0.01em;
     text-decoration: none;
 
     &:hover {
@@ -195,14 +191,13 @@
 
   button {
     position: absolute;
-    height: $masthead-height;
+    height: 2.5rem;
     right: 0;
-    top: 0;
     padding: 0 0.5rem;
     border: 0;
     outline: none;
-    background-color: transparent;
-    color: var(--global-text-color);
+    background-color: var(--global-base-color);
+    color: #fff;
     cursor: pointer;
     z-index: 100;
   }
@@ -238,8 +233,8 @@
         position: absolute;
         left: 0;
         bottom: 0;
-        height: 2px;
-        background: var(--global-link-color);
+        height: 4px;
+        background: var(--global-border-color);
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
@@ -264,17 +259,17 @@
     padding: 5px;
     border: 1px solid var(--global-border-color);
     border-radius: $border-radius;
-    background: var(--global-surface-color);
-    box-shadow: var(--global-card-shadow);
+    background: #fff;
+    box-shadow: 0 0 10px rgba(#000, 0.25);
 
     a {
       margin: 0;
       padding: 10px 20px;
-      font-size: 0.92rem;
+      font-size: $type-size-5;
 
       &:hover {
         color: var(--global-masthead-link-color-hover);
-        background: var(--global-thead-color);
+        background: var(--global-border-color);
       }
     }
 
@@ -299,7 +294,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: var(--global-surface-color) transparent;
+      border-color: #fff transparent;
       display: block;
       z-index: 1;
     }
@@ -343,7 +338,7 @@
     padding-right: 0.5em;
     color: #fff;
     font-weight: bold;
-    background: var(--global-link-color);
+    background: var(--global-base-color);
     border-radius: $border-radius;
 
     &:hover {
@@ -382,7 +377,6 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   background-color: #fff;
-  background-color: var(--global-surface-color);
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
@@ -414,8 +408,8 @@
     text-decoration-line: none !important;
 
     &:hover {
-      color: var(--global-link-color-hover);
-      background: var(--global-thead-color);
+      color: #000;
+      background: var(--global-link-color-hover);
     }
   }
 

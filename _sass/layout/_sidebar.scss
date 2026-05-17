@@ -14,15 +14,14 @@
   margin-bottom: 1em;
 
   @media screen and (min-width: $sidebar-screen-min-width) {
-    height: calc(100vh - #{$masthead-height});
+    height: 100vh;
     overflow-y: auto;               // Add scrollbar if the sidebar is too long
-    position: sticky;
-    top: calc(#{$masthead-height} + 1.5rem);
-    padding-top: 0;
+    position: fixed;
+    padding-top: $masthead-height;
   }
 
   @include breakpoint($large) {
-    @include span(3 of 12);
+    @include span(2 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -57,25 +56,6 @@
   }
 }
 
-.author-profile-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.25rem;
-  background: var(--global-surface-color-alpha);
-  border: 1px solid var(--global-border-color);
-  border-radius: var(--global-card-radius-large);
-  box-shadow: var(--global-card-shadow);
-}
-
-.author-profile-card .author__avatar img {
-  display: block;
-  width: min(100%, 175px);
-  max-width: 175px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .sidebar__right {
   margin-bottom: 1em;
 
@@ -105,20 +85,16 @@
 
   @include breakpoint($large) {
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
-    text-align: center;
   }
 
   img {
     max-width: 175px;
-    border-radius: 28px;
+    border-radius: 50%;
 
     @include breakpoint($large) {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0;
+      padding: 5px;
       border: 1px solid var(--global-border-color);
     }
   }
@@ -136,14 +112,11 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
-    text-align: center;
   }
 }
 
 .author__name {
   margin: 0;
-  font-weight: 750;
-  letter-spacing: -0.025em;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -158,7 +131,7 @@
 .sidebar .author__desktop {
   display: none;
   @media screen and (min-width: 1024px) {
-    display: grid;
+    display: block;
   }
 }
 
@@ -173,8 +146,6 @@
 
 .author__bio {
   margin: 0;
-  color: var(--global-text-color-light);
-  line-height: 1.6;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -199,7 +170,6 @@
 
   @include breakpoint($large) {
     display: block;
-    width: 100%;
   }
 
   button {
@@ -219,10 +189,10 @@
   padding: 10px;
   list-style-type: none;
   border: 1px solid var(--global-border-color);
-  border-radius: var(--global-card-radius-medium);
-  background: var(--global-surface-color);
+  border-radius: $border-radius;
+  background: var(--global-bg-color);
   z-index: -1;
-  box-shadow: var(--global-card-shadow);
+  box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
 
   @include breakpoint($large) {
@@ -261,7 +231,7 @@
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
-    border-color: var(--global-surface-color) transparent;
+    border-color: #fff transparent;
     z-index: 1;
 
     @include breakpoint($large) {
@@ -270,50 +240,21 @@
   }
 
   li {
-    display: grid;
-    grid-template-columns: 1.25rem minmax(0, 1fr);
-    column-gap: 0.7rem;
-    align-items: start;
-    margin-bottom: 5px;
-    padding: 0.35rem 0.25rem;
-    color: var(--global-text-color-light);
-    font-size: 0.9rem;
-    line-height: 1.35;
-    white-space: normal;
+    white-space: nowrap;
   }
 
   a {
-    display: grid;
-    grid-template-columns: 1.25rem minmax(0, 1fr);
-    column-gap: 0.7rem;
-    grid-column: 1 / -1;
-    align-items: start;
-    width: 100%;
-    margin-bottom: 0;
-    padding: 0;
+    display: block;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     color: inherit;
-    font-size: inherit;
-    line-height: inherit;
+    font-size: $type-size-5;
     text-decoration: none;
 
     &:hover {
-      color: var(--global-link-color-hover);
-      text-decoration: none;
+      text-decoration: underline;
     }
-  }
-
-  .fas,
-  .fa,
-  .fa-solid,
-  .fa-regular,
-  .fab,
-  .far,
-  .ai {
-    width: 1.25rem;
-    margin-right: 0;
-    padding-right: 0;
-    line-height: inherit;
-    text-align: center;
-    color: var(--global-text-color-muted);
   }
 }
