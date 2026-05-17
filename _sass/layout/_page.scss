@@ -42,7 +42,7 @@
   }
 
   .page__inner-wrap {
-    max-width: 900px;
+    max-width: 1040px;
   }
 }
 
@@ -155,7 +155,7 @@
 }
 
 .academic-hero {
-  max-width: 900px;
+  max-width: 1040px;
   margin: 0 0 3rem;
   padding: clamp(2rem, 5vw, 4.5rem) clamp(1.25rem, 4vw, 3rem);
   background: var(--global-surface-color-alpha);
@@ -174,7 +174,7 @@
 }
 
 .academic-hero__title {
-  max-width: 860px;
+  max-width: 980px;
   margin: 0;
   font-family: $header-font-family;
   font-size: clamp(2.25rem, 5.75vw, 4.25rem);
@@ -184,7 +184,7 @@
 }
 
 .academic-hero__summary {
-  max-width: 720px;
+  max-width: 840px;
   margin: 1.75rem 0 0;
   color: var(--global-text-color-light);
   font-size: clamp(1.05rem, 2vw, 1.28rem);
