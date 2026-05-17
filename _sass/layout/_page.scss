@@ -19,7 +19,7 @@
 
 .page {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
+    @include span(9.5 of 12 last);
     @include prefix(0.5 of 12);
     @include suffix(2 of 12);
   }
@@ -177,15 +177,15 @@
   max-width: 860px;
   margin: 0;
   font-family: $header-font-family;
-  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-size: clamp(2.5rem, 6.5vw, 4.75rem);
   font-weight: 750;
-  line-height: 0.98;
-  letter-spacing: -0.06em;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
 
 .academic-hero__summary {
   max-width: 720px;
-  margin: 1.25rem 0 0;
+  margin: 1.75rem 0 0;
   color: var(--global-text-color-light);
   font-size: clamp(1.05rem, 2vw, 1.28rem);
   line-height: 1.58;

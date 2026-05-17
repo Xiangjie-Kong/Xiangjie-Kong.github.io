@@ -22,7 +22,7 @@
   }
 
   @include breakpoint($large) {
-    @include span(2 of 12);
+    @include span(2.5 of 12);
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -58,7 +58,7 @@
 }
 
 .author-profile-card {
-  padding: 1.1rem;
+  padding: 1.25rem;
   background: var(--global-surface-color-alpha);
   border: 1px solid var(--global-border-color);
   border-radius: var(--global-card-radius-large);
@@ -253,11 +253,15 @@
   }
 
   li {
-    white-space: nowrap;
+    display: flex;
+    align-items: flex-start;
+    white-space: normal;
   }
 
   a {
-    display: block;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
     margin-bottom: 5px;
     padding: 0.35rem 0.25rem;
     color: var(--global-text-color-light);
@@ -275,6 +279,12 @@
   .fab,
   .far,
   .ai {
+    flex: 0 0 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.7rem;
+    padding-right: 0;
+    line-height: inherit;
+    text-align: center;
     color: var(--global-text-color-muted);
   }
 }
