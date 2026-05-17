@@ -142,7 +142,7 @@
 .sidebar .author__desktop {
   display: none;
   @media screen and (min-width: 1024px) {
-    display: block;
+    display: grid;
   }
 }
 
@@ -259,6 +259,9 @@
     align-items: start;
     margin-bottom: 5px;
     padding: 0.35rem 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    line-height: 1.35;
     white-space: normal;
   }
 
@@ -271,9 +274,9 @@
     width: 100%;
     margin-bottom: 0;
     padding: 0;
-    color: var(--global-text-color-light);
-    font-size: 0.9rem;
-    line-height: 1.35;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
     text-decoration: none;
 
     &:hover {
