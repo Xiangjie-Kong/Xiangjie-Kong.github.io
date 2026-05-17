@@ -58,11 +58,22 @@
 }
 
 .author-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1.25rem;
   background: var(--global-surface-color-alpha);
   border: 1px solid var(--global-border-color);
   border-radius: var(--global-card-radius-large);
   box-shadow: var(--global-card-shadow);
+}
+
+.author-profile-card .author__avatar img {
+  display: block;
+  width: min(100%, 175px);
+  max-width: 175px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sidebar__right {
@@ -94,7 +105,7 @@
 
   @include breakpoint($large) {
     display: block;
-    width: auto;
+    width: 100%;
     height: auto;
     text-align: center;
   }
@@ -188,6 +199,7 @@
 
   @include breakpoint($large) {
     display: block;
+    width: 100%;
   }
 
   button {
