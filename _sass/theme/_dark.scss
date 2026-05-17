@@ -30,7 +30,7 @@ $global-transition          : color 180ms ease, background-color 180ms ease, bor
 $masthead-height            : 56px;
 $navicon-width              : 28px;
 $navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
+$sidebar-link-max-width     : 320px;
 $sidebar-screen-min-width   : 1024px;
 
 /* Dark theme for the site */
@@ -55,7 +55,7 @@ $sidebar-screen-min-width   : 1024px;
     --global-thead-color                : rgba(255, 255, 255, 0.08);
     --global-card-radius-large          : 24px;
     --global-card-radius-medium         : 16px;
-    --global-site-max-width             : 1120px;
+    --global-site-max-width             : 1500px;
     --global-reading-max-width          : 760px;
     --global-card-shadow                : 0 16px 40px rgba(0, 0, 0, 0.35);
     --global-card-shadow-hover          : 0 22px 55px rgba(0, 0, 0, 0.5);
