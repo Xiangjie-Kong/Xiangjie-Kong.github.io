@@ -96,6 +96,7 @@
     display: block;
     width: auto;
     height: auto;
+    text-align: center;
   }
 
   img {
@@ -103,6 +104,9 @@
     border-radius: 28px;
 
     @include breakpoint($large) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       padding: 0;
       border: 1px solid var(--global-border-color);
     }
@@ -121,6 +125,7 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
   }
 }
 
