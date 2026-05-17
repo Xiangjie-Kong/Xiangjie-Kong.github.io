@@ -15,8 +15,9 @@ $indent-var                 : 1.3em;
 
 /* System typefaces */
 $serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+$sans-serif                 : -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$display-sans-serif         : -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$monospace                  : "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Monaco, "Lucida Console", monospace;
 
 /* Sans serif typefaces */
 $sans-serif-narrow          : $sans-serif;
@@ -40,8 +41,8 @@ $type-size-7                : 0.6875em; // ~11px
 $type-size-8                : 0.625em;  // ~10px
 
 $global-font-family         : $sans-serif;
-$header-font-family         : $sans-serif;
-$caption-font-family        : $serif;
+$header-font-family         : $display-sans-serif;
+$caption-font-family        : $sans-serif;
 
 /* ==========================================================================
    Breakpoints

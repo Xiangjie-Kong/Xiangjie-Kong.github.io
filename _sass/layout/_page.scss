@@ -5,14 +5,15 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 2em;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin-top: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   animation: intro 0.3s both;
   animation-delay: 0.35s;
+  max-width: var(--global-site-max-width);
 
   @include breakpoint($x-large) {
-    max-width: $x-large;
+    max-width: var(--global-site-max-width);
   }
 }
 
@@ -25,6 +26,7 @@
 
   .page__inner-wrap {
     @include full();
+    max-width: var(--global-reading-max-width);
 
     .page__content,
     .page__meta,
@@ -34,9 +36,21 @@
   }
 }
 
+.page--home {
+  @include breakpoint($large) {
+    padding-right: 0;
+  }
+
+  .page__inner-wrap {
+    max-width: 900px;
+  }
+}
+
 .page__title {
   margin-top: 0;
-  line-height: 1;
+  margin-bottom: 1rem;
+  line-height: 1.02;
+  letter-spacing: -0.05em;
 
   & + .page__meta {
     margin-top: -0.5em;
@@ -46,13 +60,24 @@
 .page__lead {
   font-family: $global-font-family;
   font-size: $type-size-4;
+  color: var(--global-text-color-light);
+  line-height: 1.5;
 }
 
 .page__content {
+  color: var(--global-text-color);
+  line-height: 1.72;
 
   h2 {
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid var(--global-border-color);
+    margin-top: 2.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  h3 {
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
   }
 
   p, li, dl {
@@ -73,15 +98,37 @@
   }
 
   a {
-    text-decoration: underline;
+    color: var(--global-link-color);
+    text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      color: var(--global-link-color-hover);
+      text-decoration: none;
 
       img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
+        box-shadow: var(--global-card-shadow-hover);
       }
     }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--global-card-radius-medium);
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: var(--global-card-radius-medium);
+  }
+
+  pre {
+    padding: 1rem;
+    background: var(--global-code-background-color);
+    border: 1px solid var(--global-border-color);
+    border-radius: var(--global-card-radius-medium);
   }
 
   dt {
@@ -105,6 +152,72 @@
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
+}
+
+.academic-hero {
+  max-width: 900px;
+  margin: 0 0 3rem;
+  padding: clamp(2rem, 5vw, 4.5rem) clamp(1.25rem, 4vw, 3rem);
+  background: var(--global-surface-color-alpha);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--global-card-radius-large);
+  box-shadow: var(--global-card-shadow);
+}
+
+.academic-hero__eyebrow {
+  margin: 0 0 1rem;
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.academic-hero__title {
+  max-width: 860px;
+  margin: 0;
+  font-family: $header-font-family;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 750;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.academic-hero__summary {
+  max-width: 720px;
+  margin: 1.25rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.58;
+}
+
+.academic-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.content-card {
+  margin: 2rem 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--global-surface-color-alpha);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--global-card-radius-large);
+  box-shadow: var(--global-card-shadow);
+}
+
+.content-card > :first-child {
+  margin-top: 0;
+}
+
+.content-card > :last-child {
+  margin-bottom: 0;
+}
+
+.home-featured-paper img {
+  display: block;
+  margin: 1rem 0;
 }
 
 .page__hero {
@@ -269,10 +382,33 @@
   text-decoration: none;
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
+  background: var(--global-surface-color);
 
   &:hover {
     text-decoration: none;
     color: var(--global-link-color-hover);
+  }
+}
+
+@media (max-width: $large) {
+  #main {
+    margin-top: 1.5rem;
+  }
+
+  .page .page__inner-wrap {
+    max-width: none;
+  }
+
+  .academic-hero {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .academic-hero,
+  .content-card,
+  .page__content img {
+    transition: $global-transition;
   }
 }
 

@@ -14,10 +14,11 @@
   margin-bottom: 1em;
 
   @media screen and (min-width: $sidebar-screen-min-width) {
-    height: 100vh;
+    height: calc(100vh - #{$masthead-height});
     overflow-y: auto;               // Add scrollbar if the sidebar is too long
-    position: fixed;
-    padding-top: $masthead-height;
+    position: sticky;
+    top: calc(#{$masthead-height} + 1.5rem);
+    padding-top: 0;
   }
 
   @include breakpoint($large) {
@@ -56,6 +57,14 @@
   }
 }
 
+.author-profile-card {
+  padding: 1.1rem;
+  background: var(--global-surface-color-alpha);
+  border: 1px solid var(--global-border-color);
+  border-radius: var(--global-card-radius-large);
+  box-shadow: var(--global-card-shadow);
+}
+
 .sidebar__right {
   margin-bottom: 1em;
 
@@ -91,10 +100,10 @@
 
   img {
     max-width: 175px;
-    border-radius: 50%;
+    border-radius: 28px;
 
     @include breakpoint($large) {
-      padding: 5px;
+      padding: 0;
       border: 1px solid var(--global-border-color);
     }
   }
@@ -117,6 +126,8 @@
 
 .author__name {
   margin: 0;
+  font-weight: 750;
+  letter-spacing: -0.025em;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -146,6 +157,8 @@
 
 .author__bio {
   margin: 0;
+  color: var(--global-text-color-light);
+  line-height: 1.6;
 
   @include breakpoint($large) {
     margin-top: 10px;
@@ -189,10 +202,10 @@
   padding: 10px;
   list-style-type: none;
   border: 1px solid var(--global-border-color);
-  border-radius: $border-radius;
-  background: var(--global-bg-color);
+  border-radius: var(--global-card-radius-medium);
+  background: var(--global-surface-color);
   z-index: -1;
-  box-shadow: 0 0 10px rgba(#000, 0.25);
+  box-shadow: var(--global-card-shadow);
   cursor: default;
 
   @include breakpoint($large) {
@@ -231,7 +244,7 @@
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
-    border-color: #fff transparent;
+    border-color: var(--global-surface-color) transparent;
     z-index: 1;
 
     @include breakpoint($large) {
@@ -246,15 +259,22 @@
   a {
     display: block;
     margin-bottom: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    color: inherit;
-    font-size: $type-size-5;
+    padding: 0.35rem 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    line-height: 1.35;
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      color: var(--global-link-color-hover);
+      text-decoration: none;
     }
+  }
+
+  .fas,
+  .fab,
+  .far,
+  .ai {
+    color: var(--global-text-color-muted);
   }
 }

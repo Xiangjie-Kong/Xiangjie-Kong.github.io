@@ -6,9 +6,11 @@ table {
   margin-bottom: 1em;
   width: 100%;
   font-family: $global-font-family;
-  font-size: $type-size-6;
+  font-size: 0.9rem;
   border-collapse: collapse;
   border: 1px solid var(--global-border-color);
+  border-radius: var(--global-card-radius-medium);
+  overflow-x: auto;
 
   & + table {
     margin-top: 1em;

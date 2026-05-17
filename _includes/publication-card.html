@@ -1,0 +1,45 @@
+{% include base_path %}
+
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign publication_year = post.date | default: "1900-01-01" | date: "%Y" %}
+
+<article class="publication-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <div class="publication-card__meta">
+    <span class="publication-card__year">{{ publication_year }}</span>
+    {% if post.venue %}
+      <span aria-hidden="true">/</span>
+      <span class="publication-card__venue">{{ post.venue }}</span>
+    {% endif %}
+  </div>
+
+  <h2 class="publication-card__title" itemprop="headline">
+    <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+  </h2>
+
+  {% if post.excerpt and post.excerpt != "" %}
+    <p class="publication-card__description" itemprop="description">{{ post.excerpt | strip_html | truncate: 240 }}</p>
+  {% elsif post.citation %}
+    <p class="publication-card__description" itemprop="description">{{ post.citation | strip_html | truncate: 240 }}</p>
+  {% endif %}
+
+  <div class="publication-card__links">
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}">Paper</a>
+    {% endif %}
+    {% if post.codeurl %}
+      <a href="{{ post.codeurl }}">Code</a>
+    {% endif %}
+    {% if post.slidesurl %}
+      <a href="{{ post.slidesurl }}">Slides</a>
+    {% endif %}
+    {% if post.link %}
+      <a href="{{ post.link }}">Project</a>
+    {% endif %}
+    {% if post.citation %}
+      <details class="publication-card__citation">
+        <summary>Citation</summary>
+        <p>{{ post.citation }}</p>
+      </details>
+    {% endif %}
+  </div>
+</article>

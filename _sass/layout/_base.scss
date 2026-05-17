@@ -13,10 +13,13 @@ body {
   background-color: var(--global-bg-color);
 
   margin: 0;
-  padding: $masthead-height 0 0;
+  padding: 0;
   padding-bottom: 9em;
   font-family: $global-font-family;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -26,22 +29,23 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 2em 0 0.5em;
-  line-height: 1.2;
+  line-height: 1.08;
   font-family: $header-font-family;
-  font-weight: bold;
+  font-weight: 700;
+  letter-spacing: -0.035em;
 }
 
 h1 {
   margin-top: 0;
-  font-size: $type-size-3;
+  font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 h2 {
-  font-size: $type-size-4;
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
 }
 
 h3 {
-  font-size: $type-size-5;
+  font-size: 1.25rem;
 }
 
 h4 {
@@ -115,12 +119,17 @@ blockquote {
 /* links */
 
 a {
+  color: var(--global-link-color);
+  text-decoration-color: rgba(0, 102, 204, 0.25);
+  text-underline-offset: 0.18em;
+
   &:focus {
     @extend %tab-focus;
   }
 
   &:hover,
   &:active {
+    color: var(--global-link-color-hover);
     outline: 0;
   }
 }
@@ -147,7 +156,6 @@ td > code {
   background: var(--global-code-background-color);
   border: 1px solid var(--global-thead-color);
   border-radius: $border-radius;
-  box-shadow: $box-shadow;
   color: var(--global-code-text-color);
 
   &:before, &:after {
@@ -202,6 +210,7 @@ figure {
   img {
     width: 100%;
     border-radius: $border-radius;
+    border: 1px solid var(--global-border-color);
     -webkit-transition: $global-transition;
     transition: $global-transition;
   }
