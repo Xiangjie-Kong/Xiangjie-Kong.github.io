@@ -87,8 +87,9 @@
 }
 
 .cv-timeline__date {
+  align-self: start;
   justify-self: center;
-  min-width: 4.75em;
+  min-width: 4.85em;
   margin-top: 0.15em;
   padding: 0.2em 0.55em;
   color: #fff;
