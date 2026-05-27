@@ -23,9 +23,9 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Xiangjie Kong"
+  name             : "Xiangjie Kong / 孔祥杰"
   pronouns         : # example: "he/him"  
-  bio              : "MPhil student, The Hong Kong University of Science and Technology (Guangzhou)"
+  bio              : "MPhil student, HKUST(GZ)"
   location         : "Guangzhou, China"
   employer         : "HKUST(GZ)"
   uri              : # URL
