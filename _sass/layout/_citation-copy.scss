@@ -2,19 +2,21 @@
    Citation copy controls
    ========================================================================== */
 
+$hkust-blue: #003366 !default;
+
 .citation-copy {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-top: 0.1em;
   padding: 0.35em 0.8em;
-  color: var(--global-link-color);
+  color: #fff;
   font-family: $sans-serif;
   font-size: $type-size-6;
   font-weight: 700;
   line-height: 1.2;
-  background: rgba(#2f7f93, 0.08);
-  border: 1px solid rgba(#2f7f93, 0.28);
+  background: $hkust-blue;
+  border: 1px solid $hkust-blue;
   border-radius: 999px;
   cursor: pointer;
   transition: $global-transition;
@@ -29,15 +31,15 @@
   &:hover,
   &:focus {
     color: #fff;
-    background: var(--global-link-color);
-    border-color: var(--global-link-color);
+    background: mix(#000, $hkust-blue, 15%);
+    border-color: mix(#000, $hkust-blue, 15%);
     outline: 0;
   }
 
   &.is-copied {
     color: #fff;
-    background: #2f7f93;
-    border-color: #2f7f93;
+    background: $hkust-blue;
+    border-color: $hkust-blue;
   }
 }
 
