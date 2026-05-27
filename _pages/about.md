@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-Xiangjie Kong is an MPhil student at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/). He received his B.S. in Computer Science from [Macau University of Science and Technology](https://www.must.edu.mo/). During his undergraduate studies, he worked with the Phase Field-Computational Fluids team led by [Prof. Yang Junxiang](https://cfdyang521.github.io/) in the School of Innovative Engineering at Macau University of Science and Technology, focusing on **3D Volume Reconstruction** and **Scientific Computing**.
+Xiangjie Kong is an MPhil student at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/). He received his B.S. in Computer Science from [Macau University of Science and Technology](https://www.must.edu.mo/). During his undergraduate studies, he studied in the Phase Field-Computational Fluids team under the supervision of [Prof. Yang Junxiang](https://cfdyang521.github.io/) in the School of Innovative Engineering at Macau University of Science and Technology, focusing on **3D Volume Reconstruction** and **Scientific Computing**.
 
 Research status
 ======
-Xiangjie Kong is currently pursuing an MPhil at The Hong Kong University of Science and Technology (Guangzhou). His research interests include **3D Volume Reconstruction** and **Scientific Computing**.
+Xiangjie Kong is currently pursuing an MPhil at The Hong Kong University of Science and Technology (Guangzhou). His research interests include **LLM**.
 
 Research Achievements
 ======
