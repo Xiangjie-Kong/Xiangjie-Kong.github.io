@@ -1,3 +1,53 @@
 <script src="{{ base_path }}/assets/js/main.min.js"></script>
 
+<script>
+  (function () {
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.setAttribute("readonly", "");
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.select();
+
+      try {
+        document.execCommand("copy");
+        return Promise.resolve();
+      } catch (error) {
+        return Promise.reject(error);
+      } finally {
+        document.body.removeChild(textArea);
+      }
+    }
+
+    document.querySelectorAll(".citation-copy").forEach(function (button) {
+      var label = button.querySelector(".citation-copy__label");
+      var defaultText = label.textContent;
+
+      button.addEventListener("click", function () {
+        copyText(button.getAttribute("data-citation")).then(function () {
+          label.textContent = "Copied";
+          button.classList.add("is-copied");
+
+          window.setTimeout(function () {
+            label.textContent = defaultText;
+            button.classList.remove("is-copied");
+          }, 1800);
+        }).catch(function () {
+          label.textContent = "Copy failed";
+
+          window.setTimeout(function () {
+            label.textContent = defaultText;
+          }, 1800);
+        });
+      });
+    });
+  }());
+</script>
+
 {% include analytics.html %}

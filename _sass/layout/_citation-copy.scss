@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Citation copy controls
+   ========================================================================== */
+
+.citation-copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.1em;
+  padding: 0.35em 0.8em;
+  color: var(--global-link-color);
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: 700;
+  line-height: 1.2;
+  background: rgba(#2f7f93, 0.08);
+  border: 1px solid rgba(#2f7f93, 0.28);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: $global-transition;
+
+  &:before {
+    content: "\f328";
+    margin-right: 0.45em;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: var(--global-link-color);
+    border-color: var(--global-link-color);
+    outline: 0;
+  }
+
+  &.is-copied {
+    color: #fff;
+    background: #2f7f93;
+    border-color: #2f7f93;
+  }
+}
+
+.publication-citation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45em;
+  margin: 0.65em 0 0.35em;
+}
+
+.publication-citation__label {
+  font-size: $type-size-6;
+  font-weight: 700;
+}
+
+.publication-links {
+  margin-top: 0.25em;
+}

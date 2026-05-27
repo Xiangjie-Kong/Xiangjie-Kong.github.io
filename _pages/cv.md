@@ -145,8 +145,8 @@ redirect_from:
           <h3><a href="{{ base_path }}{{ post.url }}">{{ title }}</a></h3>
           {% if post.citation %}
             {% assign citation = post.citation | strip_html | strip_newlines | escape %}
-            <button class="cv-copy-citation" type="button" data-citation="{{ citation }}" aria-label="Copy citation for {{ title | strip_html | escape }}">
-              <span class="cv-copy-citation__label">Copy citation</span>
+            <button class="citation-copy" type="button" data-citation="{{ citation }}" aria-label="Copy citation for {{ title | strip_html | escape }}">
+              <span class="citation-copy__label">Copy citation</span>
             </button>
           {% endif %}
         </li>
@@ -154,53 +154,3 @@ redirect_from:
     </ul>
   </section>
 </div>
-
-<script>
-  (function () {
-    function copyText(text) {
-      if (navigator.clipboard && window.isSecureContext) {
-        return navigator.clipboard.writeText(text);
-      }
-
-      var textArea = document.createElement("textarea");
-      textArea.value = text;
-      textArea.setAttribute("readonly", "");
-      textArea.style.position = "fixed";
-      textArea.style.left = "-9999px";
-      document.body.appendChild(textArea);
-      textArea.select();
-
-      try {
-        document.execCommand("copy");
-        return Promise.resolve();
-      } catch (error) {
-        return Promise.reject(error);
-      } finally {
-        document.body.removeChild(textArea);
-      }
-    }
-
-    document.querySelectorAll(".cv-copy-citation").forEach(function (button) {
-      var label = button.querySelector(".cv-copy-citation__label");
-      var defaultText = label.textContent;
-
-      button.addEventListener("click", function () {
-        copyText(button.getAttribute("data-citation")).then(function () {
-          label.textContent = "Copied";
-          button.classList.add("is-copied");
-
-          window.setTimeout(function () {
-            label.textContent = defaultText;
-            button.classList.remove("is-copied");
-          }, 1800);
-        }).catch(function () {
-          label.textContent = "Copy failed";
-
-          window.setTimeout(function () {
-            label.textContent = defaultText;
-          }, 1800);
-        });
-      });
-    });
-  }());
-</script>
