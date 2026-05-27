@@ -9,52 +9,145 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* B.S. in Computer Science, Macau University of Science and Technology, 2022
-* MPhil, Hong Kong University of Science and Technology (Guangzhou), 2026
+<div class="cv-page">
+  <div class="cv-intro">
+    <p>
+      A structured overview of my education, internship experience, awards,
+      technical skills, and publications.
+    </p>
+  </div>
 
-Awards
-======
-*  **Dean’s Honor List**,  2023/2024 academic year
-*  **2024 Tencent AI Arena Global Open Competition Intelligent Agent Gaming Algorithm Track [World Finals]–15th Place**,  December 2024
-*  **The 14th National College Students’ E-Commerce "Innovation, Creativity and Entrepreneurship" Challenge Competition [Provincial]–Second Prize**,  June 2024
+  <section class="cv-card" id="general-information">
+    <h2>General Information</h2>
+    <dl class="cv-info-grid">
+      <dt>Full Name</dt>
+      <dd>Xiangjie Kong</dd>
+      <dt>Email</dt>
+      <dd><a href="mailto:1220019046@student.must.edu.mo">1220019046@student.must.edu.mo</a></dd>
+      <dt>Location</dt>
+      <dd>Macao SAR, China</dd>
+      <dt>Field</dt>
+      <dd>Computer Science</dd>
+    </dl>
+  </section>
 
-Intern experience
-======
-* June 2024– Sep 2024: Software Engineer Intern
-  * [Inspur](https://www.inspur.com/)- intelligent healthcare, Shandong
-  * Duties includes: Metadata Extraction from EHR Scripts, Graph Database Creation, Front-end Design and Development, Disrupt the order of data inside csv files
+  <section class="cv-card" id="education">
+    <h2>Education</h2>
+    <ol class="cv-timeline">
+      <li class="cv-timeline__item">
+        <span class="cv-timeline__date">2026</span>
+        <div class="cv-timeline__body">
+          <h3>MPhil</h3>
+          <p class="cv-place">Hong Kong University of Science and Technology (Guangzhou)</p>
+        </div>
+      </li>
+      <li class="cv-timeline__item">
+        <span class="cv-timeline__date">2022</span>
+        <div class="cv-timeline__body">
+          <h3>B.S. in Computer Science</h3>
+          <p class="cv-place">Macau University of Science and Technology</p>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-* June 2023– Aug 2023: Software Engineer Intern
-  * [Shandong Taiwei Digital Software Co.](http://www.twrj.net/), Shandong
-  * Duties included: Low Code Developement, Designed software through the YIDA platform in Alibaba’s DingTalk software
-  
-Skills
-======
-* Coding Languages: C++, C, Latex, Python, MATLAB, Html
-* Technologies: Vscode, MATLAB, Pycharm, Colab, Vue.js, Node.js
+  <section class="cv-card" id="experience">
+    <h2>Experience</h2>
+    <ol class="cv-timeline">
+      <li class="cv-timeline__item">
+        <span class="cv-timeline__date">2024</span>
+        <div class="cv-timeline__body">
+          <h3>Software Engineer Intern</h3>
+          <p class="cv-place">Inspur, intelligent healthcare, Shandong</p>
+          <p class="cv-period">June 2024 - September 2024</p>
+          <ul>
+            <li>Extracted metadata from EHR scripts.</li>
+            <li>Created graph database assets for healthcare data workflows.</li>
+            <li>Worked on front-end design and development.</li>
+            <li>Processed and shuffled data inside CSV files.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="cv-timeline__item">
+        <span class="cv-timeline__date">2023</span>
+        <div class="cv-timeline__body">
+          <h3>Software Engineer Intern</h3>
+          <p class="cv-place">Shandong Taiwei Digital Software Co., Shandong</p>
+          <p class="cv-period">June 2023 - August 2023</p>
+          <ul>
+            <li>Worked on low-code development.</li>
+            <li>Designed software through the YIDA platform in Alibaba's DingTalk software.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-<!--
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
+  <section class="cv-card" id="honors-and-awards">
+    <h2>Honors and Awards</h2>
+    <ol class="cv-timeline cv-timeline--compact">
+      <li class="cv-timeline__item">
+        <span class="cv-timeline__date">2024</span>
+        <div class="cv-timeline__body">
+          <h3>Tencent AI Arena Global Open Competition</h3>
+          <p class="cv-place">Intelligent Agent Gaming Algorithm Track, World Finals - 15th Place</p>
+        </div>
+      </li>
+      <li class="cv-timeline__item">
+        <span class="cv-timeline__date">2024</span>
+        <div class="cv-timeline__body">
+          <h3>14th National College Students' E-Commerce Challenge</h3>
+          <p class="cv-place">Innovation, Creativity and Entrepreneurship Challenge, Provincial Second Prize</p>
+        </div>
+      </li>
+      <li class="cv-timeline__item">
+        <span class="cv-timeline__date">2023/24</span>
+        <div class="cv-timeline__body">
+          <h3>Dean's Honor List</h3>
+          <p class="cv-place">2023/2024 academic year</p>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-<!--
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
--->
+  <section class="cv-card" id="skills">
+    <h2>Skills</h2>
+    <div class="cv-skill-group">
+      <h3>Coding Languages</h3>
+      <ul class="cv-tags">
+        <li>C++</li>
+        <li>C</li>
+        <li>LaTeX</li>
+        <li>Python</li>
+        <li>MATLAB</li>
+        <li>HTML</li>
+      </ul>
+    </div>
+    <div class="cv-skill-group">
+      <h3>Technologies</h3>
+      <ul class="cv-tags">
+        <li>VS Code</li>
+        <li>MATLAB</li>
+        <li>PyCharm</li>
+        <li>Colab</li>
+        <li>Vue.js</li>
+        <li>Node.js</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cv-card" id="publications">
+    <h2>Publications</h2>
+    <ul class="cv-publications">
+      {% for post in site.publications reversed %}
+        {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+        <li>
+          <h3><a href="{{ base_path }}{{ post.url }}">{{ title }}</a></h3>
+          {% if post.citation %}
+            <p>{{ post.citation }}</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
