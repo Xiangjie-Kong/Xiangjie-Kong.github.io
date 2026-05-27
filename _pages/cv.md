@@ -23,9 +23,9 @@ redirect_from:
       <dt>Full Name</dt>
       <dd>Xiangjie Kong</dd>
       <dt>Email</dt>
-      <dd><a href="mailto:1220019046@student.must.edu.mo">1220019046@student.must.edu.mo</a></dd>
+      <dd><a href="mailto:k2442041357@gmail.com">k2442041357@gmail.com</a></dd>
       <dt>Location</dt>
-      <dd>Macao SAR, China</dd>
+      <dd>Guangzhou, China</dd>
       <dt>Field</dt>
       <dd>Computer Science</dd>
     </dl>

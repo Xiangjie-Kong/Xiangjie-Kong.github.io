@@ -23,13 +23,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Xiangjie Kong / 孔祥杰"
+  name             : "Xiangjie Kong"
   pronouns         : # example: "he/him"  
-  bio              : "Undergraduate student, FIE, Macau University of Science and Technology"
-  location         : "Macao SAR, China"
-  employer         : "M.U.S.T"
+  bio              : "MPhil student, The Hong Kong University of Science and Technology (Guangzhou)"
+  location         : "Guangzhou, China"
+  employer         : "HKUST(GZ)"
   uri              : # URL
-  email            : "1220019046@student.must.edu.mo" 
+  email            : "k2442041357@gmail.com"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
