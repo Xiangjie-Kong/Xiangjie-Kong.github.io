@@ -38,7 +38,7 @@ redirect_from:
         <span class="cv-timeline__date">2026</span>
         <div class="cv-timeline__body">
           <h3>MPhil</h3>
-          <p class="cv-place">Hong Kong University of Science and Technology (Guangzhou)</p>
+          <p class="cv-place">The Hong Kong University of Science and Technology (Guangzhou)</p>
         </div>
       </li>
       <li class="cv-timeline__item">
