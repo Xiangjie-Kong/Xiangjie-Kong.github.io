@@ -42,3 +42,13 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+/* Hide the site-wide footer (sitemap, follow links, and copyright). */
+.page__footer {
+  display: none;
+}
+
+/* The footer is hidden, so its reserved bottom spacing is no longer needed. */
+body {
+  padding-bottom: 0;
+}
