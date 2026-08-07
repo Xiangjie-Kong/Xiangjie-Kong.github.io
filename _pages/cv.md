@@ -23,7 +23,7 @@ redirect_from:
       <dt>Full Name</dt>
       <dd>Xiangjie Kong</dd>
       <dt>Email</dt>
-      <dd><a href="mailto:k2442041357@gmail.com">k2442041357@gmail.com</a></dd>
+      <dd><a href="mailto:xkong081@connect.hkust-gz.edu.cn">xkong081@connect.hkust-gz.edu.cn</a></dd>
       <dt>Location</dt>
       <dd>Guangzhou, China</dd>
       <dt>Field</dt>
