@@ -101,10 +101,10 @@ redirect_from:
         </div>
       </li>
       <li class="cv-timeline__item">
-        <span class="cv-timeline__date">2023/24</span>
+        <span class="cv-timeline__date">2024/26</span>
         <div class="cv-timeline__body">
-          <h3>Dean's Honor List —— Awarded Twice</h3>
-          <p class="cv-place">2024 and 2026</p>
+          <h3>Dean's Honor List</h3>
+          <p class="cv-place">2023/2024 academic year and 2025/2026 academic year (sophomore and senior)</p>
         </div>
       </li>
     </ol>
