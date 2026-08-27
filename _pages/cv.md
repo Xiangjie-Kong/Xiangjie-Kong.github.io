@@ -87,6 +87,13 @@ redirect_from:
     <h2>Honors and Awards</h2>
     <ol class="cv-timeline cv-timeline--compact">
       <li class="cv-timeline__item">
+        <span class="cv-timeline__date">2024/26</span>
+        <div class="cv-timeline__body">
+          <h3>Dean's Honor List</h3>
+          <p class="cv-place">2023/2024 academic year and 2025/2026 academic year (sophomore and senior)</p>
+        </div>
+      </li>
+      <li class="cv-timeline__item">
         <span class="cv-timeline__date">2024</span>
         <div class="cv-timeline__body">
           <h3>Tencent AI Arena Global Open Competition</h3>
@@ -98,13 +105,6 @@ redirect_from:
         <div class="cv-timeline__body">
           <h3>14th National College Students' E-Commerce Challenge</h3>
           <p class="cv-place">Innovation, Creativity and Entrepreneurship Challenge, Provincial Second Prize</p>
-        </div>
-      </li>
-      <li class="cv-timeline__item">
-        <span class="cv-timeline__date">2024/26</span>
-        <div class="cv-timeline__body">
-          <h3>Dean's Honor List</h3>
-          <p class="cv-place">2023/2024 academic year and 2025/2026 academic year (sophomore and senior)</p>
         </div>
       </li>
     </ol>
