@@ -43,4 +43,4 @@ At HKUST(GZ), I am a member of the [Deep Interdisciplinary Intelligence Lab (DiÂ
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
-<script defer src="{{ '/assets/js/visitor-map.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/visitor-map.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
