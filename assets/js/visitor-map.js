@@ -1,6 +1,7 @@
 /* Leaflet / OpenStreetMap display; real visits and aggregates from FeedPulse.
- * Public dashboard: https://feed-pulse.com/dashboard?site=bc8eec62-85f7-44af-98dd-4e4e894105ab
- * API paths follow FeedPulse's visitor-globe.js and hit-counter.js widgets.
+ * API paths follow FeedPulse's traffic-feed.js and hit-counter.js widgets.
+ * Country centers: https://github.com/mledoze/countries (ODbL 1.0).
+ * Snapshot: 2026-09-10. Markers represent countries, not precise visitor coordinates.
  */
 (async function () {
   "use strict";
@@ -18,7 +19,7 @@
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       noWrap: true,
       bounds: [[-85.0511, -180], [85.0511, 180]],
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | <a href="https://github.com/mledoze/countries">Country data</a>'
     }).addTo(map);
     const fit = () => {
       map.invalidateSize();
@@ -50,36 +51,46 @@
     }
   }
 
-  async function read(path) {
-    const response = await fetch(`${api}/${path}`, { signal: AbortSignal.timeout(8000) });
+  async function read(url) {
+    const response = await fetch(url, { signal: AbortSignal.timeout(8000) });
     if (!response.ok) throw new Error("Visitor statistics unavailable");
     return response.json();
   }
 
-  const [totals, locations] = await Promise.allSettled([
-    read(`widget/hits/${site}?base=0&reset_at=0&reset_to=0`),
-    read(`visitor-map/${site}?hours=24&limit=400`)
+  const [totals, locations, centers] = await Promise.allSettled([
+    read(`${api}/widget/hits/${site}?base=0&reset_at=0&reset_to=0`),
+    read(`${api}/widget/traffic/${site}?limit=400&include_bots=0`),
+    read("/assets/data/visitor-countries.json")
   ]);
   if (totals.status === "fulfilled" && Number.isSafeInteger(totals.value?.total) && totals.value.total >= 0) {
     count.textContent = totals.value.total.toLocaleString("en-US");
   } else {
     count.parentElement.textContent = "Visitor statistics are temporarily unavailable.";
   }
-  if (locations.status !== "fulfilled" || !Array.isArray(locations.value?.points)) {
+  if (locations.status !== "fulfilled" || !Array.isArray(locations.value?.visits) ||
+      centers.status !== "fulfilled" || !centers.value || typeof centers.value !== "object") {
     status.textContent = "Visitor locations are temporarily unavailable.";
     return;
   }
-  const points = locations.value.points.filter(p => p &&
-    Number.isFinite(p.lat) && Math.abs(p.lat) <= 90 &&
-    Number.isFinite(p.lng) && Math.abs(p.lng) <= 180);
-  // ponytail: use the provider's recent 400-point window; add archival storage only if needed.
-  status.textContent = points.length ? "Recent locations (past 24 hours)." : "No recent visitor locations yet.";
+  const countries = new Map();
+  const now = Date.now();
+  // ponytail: show the latest 400 visits within 24 hours; add archival storage if needed.
+  locations.value.visits.forEach(visit => {
+    if (!visit || visit.is_bot || !/^[A-Z]{2}$/.test(visit.country_code)) return;
+    const age = now - Date.parse(visit.created_at);
+    const point = centers.value[visit.country_code];
+    if (!Number.isFinite(age) || age < 0 || age > 86400000 || !Array.isArray(point) ||
+        !Number.isFinite(point[0]) || Math.abs(point[0]) > 90 ||
+        !Number.isFinite(point[1]) || Math.abs(point[1]) > 180 || typeof point[2] !== "string") return;
+    countries.set(visit.country_code, point);
+  });
+  status.textContent = countries.size ? "Past 24 hours · approximate country/region locations." : "No recent visitor locations yet.";
   if (!map) return;
   const icon = L.divIcon({ className: "visitor-map__dot", iconSize: [8, 8] });
-  points.forEach(point => {
+  countries.forEach(point => {
     const label = document.createElement("span");
-    label.textContent = [point.city, point.country].filter(v => typeof v === "string" && v).join(", ") || "Visitor location";
-    L.marker([point.lat, point.lng], { icon, title: label.textContent })
-      .addTo(map).bindPopup(label);
+    label.textContent = `${point[2]} — approximate country/region location`;
+    L.marker([point[0], point[1]], { icon, title: label.textContent })
+      .addTo(map).bindPopup(label, { maxWidth: 220 });
   });
 })();

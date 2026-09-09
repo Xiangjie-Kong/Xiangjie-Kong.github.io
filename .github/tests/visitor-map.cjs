@@ -4,8 +4,10 @@ const fs = require("node:fs");
 const vm = require("node:vm");
 const path = require("node:path");
 const source = fs.readFileSync(path.join(__dirname, "../../assets/js/visitor-map.js"), "utf8");
+const coordinates = JSON.parse(fs.readFileSync(path.join(__dirname, "../../assets/data/visitor-countries.json"), "utf8"));
+const recent = new Date(Date.now() - 60000).toISOString();
 
-async function run({ hostname = "localhost", totals = { total: 7 }, points = [], fail = false, leaflet = true } = {}) {
+async function run({ hostname = "localhost", totals = { total: 7 }, visits = [], fail = false, leaflet = true } = {}) {
   const calls = [], markers = [], popups = [];
   const nodes = {
     "visitor-map": { dataset: { siteId: "test-site" }, clientWidth: 494 },
@@ -25,21 +27,28 @@ async function run({ hostname = "localhost", totals = { total: 7 }, points = [],
     fetch: async (url, options = {}) => {
       calls.push({ url, options });
       if (fail) throw new Error("Offline");
-      return { ok: true, json: async () => url.includes("widget/hits") ? totals : { points } };
+      return { ok: true, json: async () => url.includes("widget/hits") ? totals :
+        url.includes("widget/traffic") ? { visits } : coordinates };
     }
   });
   return { calls, markers, popups, nodes };
 }
 
 (async () => {
-  const local = await run({ points: [
-    { lat: 22.3, lng: 113.5, city: "<img src=x onerror=alert(1)>" },
-    { lat: null, lng: 0 }, { lat: 91, lng: 0 }, { lat: 0, lng: 181 }, null
+  const local = await run({ visits: [
+    { country_code: "SG", created_at: recent, country_name: "<img src=x onerror=alert(1)>" },
+    { country_code: "SG", created_at: recent },
+    { country_code: "US", created_at: "2020-01-01T00:00:00Z" },
+    { country_code: "US", created_at: recent, is_bot: true },
+    { country_code: "US", created_at: "invalid" },
+    { country_code: "ZZ", created_at: recent },
+    { country_code: "__proto__", created_at: recent }, null
   ] });
-  assert.equal(local.calls.length, 2, "Previews must only read statistics");
+  assert.equal(local.calls.length, 3, "Previews must only read statistics and country data");
+  assert.ok(local.calls.every(c => !c.options.method), "Previews must not track visits");
   assert.equal(local.nodes["visitor-map-count"].textContent, "7");
-  assert.deepEqual(local.markers, [[22.3, 113.5]], "Reject invalid coordinates");
-  assert.equal(local.popups[0].textContent, "<img src=x onerror=alert(1)>", "Popup content must remain text");
+  assert.deepEqual(local.markers, [[1.36666666, 103.8]], "Deduplicate countries; reject bots, old visits and unknown locations");
+  assert.equal(local.popups[0].textContent, "Singapore — approximate country/region location");
 
   const live = await run({ hostname: "xiangjie-kong.github.io", totals: { total: 0 } });
   assert.equal(live.calls.filter(c => c.options.method === "POST").length, 1);
@@ -47,14 +56,20 @@ async function run({ hostname = "localhost", totals = { total: 7 }, points = [],
   assert.equal(live.nodes["visitor-map-count"].textContent, "0", "A verified zero is valid");
 
   const offline = await run({ hostname: "xiangjie-kong.github.io", fail: true });
-  assert.equal(offline.calls.length, 3, "An uncertain tracking write must not be retried");
+  assert.equal(offline.calls.length, 4, "An uncertain tracking write must not be retried");
   assert.match(offline.nodes["visitor-map-count"].parentElement.textContent, /unavailable/);
   assert.match(offline.nodes["visitor-map-status"].textContent, /unavailable/);
 
-  const malformed = await run({ totals: null, points: null });
+  const malformed = await run({ totals: null, visits: null });
   assert.match(malformed.nodes["visitor-map-count"].parentElement.textContent, /unavailable/);
   const noMap = await run({ leaflet: false });
   assert.match(noMap.nodes["visitor-map"].textContent, /could not load/);
   assert.equal(noMap.nodes["visitor-map-count"].textContent, "7", "Statistics should work without Leaflet");
-  console.log("PASS: real counts, safe coordinates and popup text, preview isolation, graceful failures, no write retries.");
+  for (const [code, point] of Object.entries(coordinates)) {
+    if (code.startsWith("_")) continue;
+    assert.match(code, /^[A-Z]{2}$/);
+    assert.ok(Number.isFinite(point[0]) && Math.abs(point[0]) <= 90);
+    assert.ok(Number.isFinite(point[1]) && Math.abs(point[1]) <= 180);
+  }
+  console.log("PASS: real counts, recent country locations, bot filtering, preview isolation, graceful failures, no write retries.");
 })().catch(error => { console.error(error); process.exitCode = 1; });

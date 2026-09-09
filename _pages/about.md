@@ -35,9 +35,9 @@ At HKUST(GZ), I am a member of the [Deep Interdisciplinary Intelligence Lab (Di�
 
 <section class="visitor-map" aria-labelledby="visitor-map-heading">
   <h2 id="visitor-map-heading">Global Visitor Map</h2>
-  <div id="visitor-map" class="visitor-map__canvas" aria-label="Interactive map of recent visitor locations" data-site-id="bc8eec62-85f7-44af-98dd-4e4e894105ab">Loading visitor map…</div>
+  <div id="visitor-map" class="visitor-map__canvas" aria-label="Interactive map of recent visitor countries and regions" data-site-id="bc8eec62-85f7-44af-98dd-4e4e894105ab">Loading visitor map…</div>
   <p class="visitor-map__total" aria-live="polite"><strong id="visitor-map-count">—</strong> page views since September 2026</p>
-  <p class="visitor-map__caption"><span id="visitor-map-status">Visitor locations from the past 24 hours.</span> <a href="https://feed-pulse.com/site/xiangjie-kong.github.io/traffic" target="_blank" rel="noopener">Stats by FeedPulse</a></p>
+  <p class="visitor-map__caption"><span id="visitor-map-status">Past 24 hours · approximate country/region locations.</span> <a href="https://feed-pulse.com/site/xiangjie-kong.github.io/traffic" target="_blank" rel="noopener">Stats by FeedPulse</a></p>
   <noscript><p>Enable JavaScript to view the interactive visitor map.</p></noscript>
 </section>
 
