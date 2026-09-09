@@ -28,7 +28,7 @@ At HKUST(GZ), I am a member of the [Deep Interdisciplinary Intelligence Lab (DiÂ
     <li><em>2024.06</em> Joined <strong>Inspur</strong> as a <strong>Software Engineer Intern</strong>, working on intelligent healthcare.</li>
     <li><em>2024</em> Placed <strong>15th in the World Finals</strong> of the <strong>Tencent AI Arena Global Open Competition</strong>, Intelligent Agent Gaming Algorithm Track.</li>
     <li><em>2024</em> Won the <strong>Provincial Second Prize</strong> in the <strong>14th National College Students' E-Commerce Challenge</strong> (Innovation, Creativity and Entrepreneurship).</li>
-    <li><em>2024</em> Named to the <strong>Dean's Honor List</strong> for the 2023/2024 academic year.</li>
+    <li><em>2024.9</em> Named to the <strong>Dean's Honor List</strong> for the 2023/2024 academic year.</li>
     <li><em>2023.06</em> Joined <strong>Shandong Taiwei Digital Software Co.</strong> as a <strong>Software Engineer Intern</strong>, working on low-code development.</li>
   </ul>
 </section>
