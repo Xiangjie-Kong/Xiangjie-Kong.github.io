@@ -16,9 +16,9 @@ At HKUST(GZ), I am a member of the [Deep Interdisciplinary Intelligence Lab (DiÂ
   <!-- Keep newest items first. Dates follow the existing Publications and CV entries;
        publication acceptance dates and missing graduation/award months need confirmation. -->
   <ul>
-    <li><em>2026</em> Graduated from <strong>Macau University of Science and Technology</strong> with a <strong>B.S. in Computer Science</strong>.</li>
-    <li><em>2026</em> Awarded <strong>First Class Honors</strong> at Macau University of Science and Technology.</li>
-    <li><em>2026</em> Named to the <strong>Dean's Honor List</strong> for the 2025/2026 academic year.</li>
+    <li><em>2026.8</em> Named to the <strong>Dean's Honor List</strong> for the 2025/2026 academic year.</li>
+    <li><em>2026.7</em> Awarded <strong>First Class Honors</strong> at Macau University of Science and Technology.</li>
+    <li><em>2026.6</em> Graduated from <strong>Macau University of Science and Technology</strong> with a <strong>B.S. in Computer Science</strong>.</li>
     <li><em>2025.11</em> Our <a href="https://doi.org/10.1016/j.camwa.2025.11.009">paper on Lagrange multiplier methods for 3D reconstruction</a> was accepted by <strong>Computers &amp; Mathematics with Applications</strong>.</li>
     <li><em>2025.06</em> Our <a href="https://doi.org/10.1016/j.cnsns.2025.109104">paper on an energy-stable leap-frog scheme</a> was accepted by <strong>Communications in Nonlinear Science and Numerical Simulation</strong>.</li>
     <li><em>2025.04</em> Our <a href="https://doi.org/10.3390/s25082464">Mamba U-Net paper on low-light image reconstruction</a> was accepted by <strong>Sensors</strong>.</li>
