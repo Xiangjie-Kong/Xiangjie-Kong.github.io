@@ -129,6 +129,60 @@
   font-variant-numeric: tabular-nums;
 }
 
+.visitor-map {
+  max-width: 520px;
+  margin: 2.5em auto 0;
+  padding: 12px;
+  border: 1px solid #d5e1f0;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(29, 54, 88, 0.05);
+  text-align: center;
+}
+
+.visitor-map h2 {
+  margin: 0 0 10px;
+  padding: 0;
+  border: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1em;
+}
+
+.visitor-map .visitor-map__canvas {
+  height: 210px;
+  border: 1px solid #d5e1f0;
+  border-radius: 6px;
+  background: #aad3df;
+  text-align: left;
+  z-index: 0;
+}
+
+.visitor-map__dot {
+  background: #bd596d;
+  border: 1px solid #345a78;
+  border-radius: 50%;
+}
+
+.page__content .visitor-map__total {
+  margin: 10px 0 3px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.85em;
+}
+
+.visitor-map__total strong {
+  color: #b22234;
+  font-size: 1.25em;
+  font-variant-numeric: tabular-nums;
+}
+
+.page__content .visitor-map__caption {
+  margin: 0;
+  font-size: 0.65em;
+}
+
+.visitor-map .leaflet-control a {
+  text-decoration: none;
+}
+
 .page__hero {
   position: relative;
   margin-bottom: 2em;
