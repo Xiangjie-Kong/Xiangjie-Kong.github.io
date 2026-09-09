@@ -33,8 +33,9 @@
 
   // Count only the public homepage; local previews and tests must not add visits.
   if (location.hostname === "xiangjie-kong.github.io") {
+    const started = Date.now();
     try {
-      await fetch(`${api}/track/${site}`, {
+      const response = await fetch(`${api}/track/${site}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -46,7 +47,10 @@
         }),
         signal: AbortSignal.timeout(8000)
       });
-    } catch (_) {
+      if (!response.ok) throw new Error(`FeedPulse tracking returned HTTP ${response.status}`);
+      console.info("[Visitor map] Tracking response", Date.now() - started, await response.json());
+    } catch (error) {
+      console.warn("[Visitor map] Tracking failed", Date.now() - started, error);
       // A failed or uncertain write is not retried; the read below stays useful.
     }
   }
