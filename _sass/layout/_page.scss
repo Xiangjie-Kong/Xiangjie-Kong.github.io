@@ -107,6 +107,28 @@
   }
 }
 
+.home-news h2 {
+  margin-top: 1.25em;
+}
+
+.home-news ul {
+  margin: 0;
+  padding-left: 1.4em;
+}
+
+.home-news li {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.home-news li > em:first-child {
+  margin-right: 0.35em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
 .page__hero {
   position: relative;
   margin-bottom: 2em;

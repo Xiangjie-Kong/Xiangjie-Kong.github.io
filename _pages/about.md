@@ -13,13 +13,24 @@ Research status
 ======
 Xiangjie Kong is currently pursuing an MPhil at The Hong Kong University of Science and Technology (Guangzhou). His research interests include **LLM**.
 
-Research Achievements
-======
-Here's my latest research.
-
-![](/images/paper1.png)
-[link to paper](https://doi.org/10.1016/j.cnsns.2025.108649)
-
-***Two lower boundedness-preservity auxiliary variable methods for a phase-field model of 3D narrow volume reconstruction*** was accepted by ***Communications in Nonlinear Scienceand Numerical Simulation***, a JCR Q1 top 10% journal, and Kong was the first author of the paper.
-
-In this paper, corresponding author **Prof. Junxiang Yang** proposed the numerical method, and **Kong** contributed all the numerical tests and paper writing as the first author.
+<section class="home-news" aria-labelledby="news-heading">
+  <h2 id="news-heading"><span aria-hidden="true">🔥</span> News</h2>
+  <!-- Keep newest items first. Dates follow the existing Publications and CV entries;
+       publication acceptance dates and missing graduation/award months need confirmation. -->
+  <ul>
+    <li><em>2026</em> Graduated from <strong>Macau University of Science and Technology</strong> with a <strong>B.S. in Computer Science</strong>.</li>
+    <li><em>2026</em> Awarded <strong>First Class Honors</strong> at Macau University of Science and Technology.</li>
+    <li><em>2026</em> Named to the <strong>Dean's Honor List</strong> for the 2025/2026 academic year.</li>
+    <li><em>2025.11</em> Our <a href="https://doi.org/10.1016/j.camwa.2025.11.009">paper on Lagrange multiplier methods for 3D reconstruction</a> was accepted by <strong>Computers &amp; Mathematics with Applications</strong>.</li>
+    <li><em>2025.06</em> Our <a href="https://doi.org/10.1016/j.cnsns.2025.109104">paper on an energy-stable leap-frog scheme</a> was accepted by <strong>Communications in Nonlinear Science and Numerical Simulation</strong>.</li>
+    <li><em>2025.04</em> Our <a href="https://doi.org/10.3390/s25082464">Mamba U-Net paper on low-light image reconstruction</a> was accepted by <strong>Sensors</strong>.</li>
+    <li><em>2025.03</em> Our <a href="https://doi.org/10.1016/j.camwa.2025.03.022">paper on a BDF2 method for 3D shell reconstruction</a> was accepted by <strong>Computers &amp; Mathematics with Applications</strong>.</li>
+    <li><em>2025.02</em> My <strong>first-author</strong> <a href="https://doi.org/10.1016/j.cnsns.2025.108649">paper on auxiliary variable methods for 3D volume reconstruction</a> was accepted by <strong>Communications in Nonlinear Science and Numerical Simulation</strong>.</li>
+    <li><em>2024.12</em> Our paper <a href="https://doi.org/10.1016/j.camwa.2024.12.016">Semi-analytical algorithm for quasicrystal patterns</a> was accepted by <strong>Computers &amp; Mathematics with Applications</strong>.</li>
+    <li><em>2024.06</em> Joined <strong>Inspur</strong> as a <strong>Software Engineer Intern</strong>, working on intelligent healthcare.</li>
+    <li><em>2024</em> Placed <strong>15th in the World Finals</strong> of the <strong>Tencent AI Arena Global Open Competition</strong>, Intelligent Agent Gaming Algorithm Track.</li>
+    <li><em>2024</em> Won the <strong>Provincial Second Prize</strong> in the <strong>14th National College Students' E-Commerce Challenge</strong> (Innovation, Creativity and Entrepreneurship).</li>
+    <li><em>2024</em> Named to the <strong>Dean's Honor List</strong> for the 2023/2024 academic year.</li>
+    <li><em>2023.06</em> Joined <strong>Shandong Taiwei Digital Software Co.</strong> as a <strong>Software Engineer Intern</strong>, working on low-code development.</li>
+  </ul>
+</section>
