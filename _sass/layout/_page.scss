@@ -183,6 +183,11 @@
   text-decoration: none;
 }
 
+.visitor-map .leaflet-control-attribution,
+.visitor-map__caption a[href^="https://feed-pulse.com/"] {
+  display: none;
+}
+
 .page__hero {
   position: relative;
   margin-bottom: 2em;
