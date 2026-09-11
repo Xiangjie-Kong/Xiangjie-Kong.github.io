@@ -11,6 +11,7 @@ figure_alt: 'Dark RGGB input processed through Mamba U-Net and white balance to 
 figure_width: 1400
 figure_height: 528
 venue: 'Sensors'
+jcr_quartile: Q2
 paperurl: "http://dx.doi.org/10.3390/s25082464"
 citation: 'Huang, Y., Zhu, X., Yuan, F., Shi, J., U, K., Qin, J., Kong, X., & Peng, Y. (2025). A Mamba U-Net Model for Reconstruction of Extremely Dark RGGB Images. Sensors, 25(8), 2464.'
 ---

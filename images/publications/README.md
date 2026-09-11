@@ -12,3 +12,13 @@ These thumbnails retain the complete selected figure and link to a larger local 
 | `quasicrystal-patterns.webp` | [Quasicrystal patterns](https://doi.org/10.1016/j.camwa.2024.12.016), Fig. 3 | [Publisher figure](https://ars.els-cdn.com/content/image/1-s2.0-S0898122124005601-gr003_lrg.jpg): twelve-fold pattern with experimental and numerical close-ups. |
 
 Author order was checked against the articles and the corresponding author's [2025](https://cfdyang521.github.io/publication/2017--researchworks) and [2024](https://cfdyang521.github.io/publication/2016%20-%20researchworks) publication lists. `publication_year` uses the formal journal year; the existing `date` values and sorting are preserved.
+
+## JCR quartiles
+
+Journal-level quartiles were verified on 2026-09-11 using the sources below. The year displayed beside each paper is its publication year, not the JCR data year.
+
+| Journal | JCR quartile | Source |
+| --- | --- | --- |
+| Computers & Mathematics with Applications | Q1 (Mathematics, Applied) | [Wuhan University Library](https://apps.lib.whu.edu.cn/topj/show.asp?cat=zk&id=5575); its year labels are inconsistent, so no JCR year is assigned. |
+| Communications in Nonlinear Science and Numerical Simulation | Q1 (all five listed JCR categories) | [Wuhan University Library](https://topj.lib.whu.edu.cn/show.asp?cat=zk&id=1054), listing 2024 metrics. |
+| Sensors | Q2 (Instruments and Instrumentation; Chemistry, Analytical; Engineering, Electrical and Electronic) | [Publisher journal statistics](https://www.mdpi.com/journal/sensors/stats). |

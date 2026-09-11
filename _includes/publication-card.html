@@ -19,7 +19,7 @@
     {% if post.authors %}
       <p class="publication-card__authors">{{ post.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
     {% endif %}
-    <p class="publication-card__venue"><i>{{ post.venue }}</i>, {{ publication_year }}</p>
+    <p class="publication-card__venue"><i>{{ post.venue }}</i>{% if post.jcr_quartile %} (JCR {{ post.jcr_quartile }}){% endif %}, {{ publication_year }}</p>
 
     <div class="publication-card__links">
       {% if post.paperurl %}

@@ -25,6 +25,8 @@ for post in posts:
     card = matching[0]
     assert '<strong>Xiangjie Kong</strong>' in card, f"{post.name}: author emphasis"
     assert f', {field("publication_year")}</p>' in card, f"{post.name}: publication year"
+    assert field("jcr_quartile") in ("Q1", "Q2", "Q3", "Q4")
+    assert f'(JCR {field("jcr_quartile")})' in card, f"{post.name}: JCR quartile"
     assert f'href="{field("paperurl")}"' in unescape(card), f"{post.name}: paper link"
     citation = re.search(r'data-citation="([^"]+)"', card)
     assert citation and unescape(citation[1]) == field("citation"), f"{post.name}: citation"
@@ -36,4 +38,10 @@ for post in posts:
     assert f'alt="{field("figure_alt")}"' in unescape(image[0]), f"{post.name}: image alt text"
     assert field("figure_width").isdigit() and field("figure_height").isdigit()
 
-print("PASS: all 6 papers have their figure, authors, publication year, paper link and exact citation.")
+for route in ("cv", "cv.html", "resume", "resume.html"):
+    assert not (site / route).exists(), f"Hidden CV route still published: {route}"
+for page in ("index.html", "publications/index.html", "sitemap/index.html", "sitemap.xml"):
+    content = (site / page).read_text(encoding="utf-8")
+    assert not re.search(r'(?:href="|<loc>)[^"<]*(?:/cv/?|/resume/?)\s*(?:"|</loc>)', content), page
+
+print("PASS: all 6 publication cards are complete, JCR quartiles are shown, and CV is unpublished.")
