@@ -9,7 +9,7 @@ redirect_from:
 
 I am an MPhil student at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/). I received my B.S. in Computer Science from [Macau University of Science and Technology](https://www.must.edu.mo/). During my undergraduate studies, I worked in the Phase Field-Computational Fluids team under the supervision of [Prof. Junxiang Yang](https://cfdyang521.github.io/) in the Faculty of Innovation Engineering, focusing on **3D Volume Reconstruction** and **Scientific Computing**.
 
-At HKUST(GZ), I am a member of the [Deep Interdisciplinary Intelligence Lab (Di² Lab)](https://di2lab.net/), led by [Prof. Yutao Yue](https://yutaoyue.github.io/), where I work closely with [Wenshuo Chen](https://chatonz.github.io/), a Ph.D. student in the lab. My current research interests include **Embodied Intelligence**, **Wearable Exoskeletons**, and **AI for Science (AI4Science)**.
+At HKUST(GZ), I am a member of the [Deep Interdisciplinary Intelligence Lab (Di² Lab)](https://di2lab.net/), led by [Prof. Yutao Yue](https://yutaoyue.github.io/). My current research interests include **Embodied Intelligence**, **Wearable Exoskeletons**, and **AI for Science (AI4Science)**.
 
 <section class="home-news" aria-labelledby="news-heading">
   <h2 id="news-heading"><span aria-hidden="true">🔥</span> News</h2>
