@@ -5,9 +5,7 @@ const vm = require("node:vm");
 const path = require("node:path");
 const source = fs.readFileSync(path.join(__dirname, "../../assets/js/visitor-map.js"), "utf8");
 const coordinates = JSON.parse(fs.readFileSync(path.join(__dirname, "../../assets/data/visitor-countries.json"), "utf8"));
-const recent = new Date(Date.now() - 60000).toISOString();
-
-async function run({ hostname = "localhost", visits = [], leaflet = true, geoStatus = 200, hitFailure = "" } = {}) {
+async function run({ hostname = "localhost", countryStats = { countries: [] }, leaflet = true, geoStatus = 200, hitFailure = "" } = {}) {
   const calls = [], markers = [], popups = [], timers = [], warnings = [];
   const state = { value: 13, readFailure: false };
   const nodes = {
@@ -38,7 +36,7 @@ async function run({ hostname = "localhost", visits = [], leaflet = true, geoSta
         return { ok: true, json: async () => ({ value: state.value }) };
       }
       return { ok: geoStatus === 200, status: geoStatus,
-        json: async () => url.includes("widget/traffic") ? { visits } : coordinates };
+        json: async () => url.includes("widget/flags") ? countryStats : coordinates };
     }
   });
   return { calls, markers, popups, nodes, timers, warnings, state, document };
@@ -46,18 +44,38 @@ async function run({ hostname = "localhost", visits = [], leaflet = true, geoSta
 const hits = result => result.calls.filter(c => c.url.includes("/hit/"));
 
 (async () => {
-  const local = await run({ visits: [
-    { country_code: "SG", created_at: recent, country_name: "<img src=x onerror=alert(1)>" },
-    { country_code: "SG", created_at: recent },
-    { country_code: "US", created_at: "2020-01-01T00:00:00Z" },
-    { country_code: "US", created_at: recent, is_bot: true },
-    { country_code: "US", created_at: "invalid" },
-    { country_code: "ZZ", created_at: recent }, { country_code: "__proto__", created_at: recent }, null
-  ] });
+  const local = await run({ countryStats: { countries: [
+    { country_code: "SG", count: 32, country_name: "<img src=x onerror=alert(1)>" },
+    { country_code: "SG", count: 32 },
+    { country_code: "US", count: 35 },
+    { country_code: "CN", count: 0 }, { country_code: "MO", count: -1 },
+    { country_code: "JP", count: "9" }, { country_code: "HK", count: 1.5 },
+    { country_code: "ZZ", count: 1 }, { country_code: "XX", count: 50 },
+    { country_code: "__proto__", count: 1 }, null
+  ] } });
   assert.equal(hits(local).length, 0, "Local previews must not increment");
   assert.ok(local.calls.every(c => c.options.method !== "POST"));
-  assert.deepEqual(local.markers, [[1.36666666, 103.8]]);
+  assert.deepEqual(local.markers, [[1.36666666, 103.8], [38, -97]]);
   assert.equal(local.popups[0].textContent, "Singapore — approximate country/region location");
+  assert.match(local.nodes["visitor-map-status"].textContent, /All time/);
+  assert.ok(local.calls.some(c => c.url === "https://feed-pulse.com/api/widget/flags/test-site?include_bots=0"));
+  assert.ok(local.calls.every(c => !c.url.includes("widget/traffic")), "Recent traffic cannot recover historical countries");
+
+  // Verified all-time FeedPulse country totals on 2026-10-21, including older locations.
+  const history = await run({ countryStats: { all_time: 155, countries:
+    [["XX", 50], ["US", 35], ["SG", 32], ["MO", 15], ["CN", 10],
+     ["JP", 9], ["HK", 1], ["IN", 1], ["CA", 1], ["NL", 1]]
+      .map(([country_code, count]) => ({ country_code, count }))
+  } });
+  assert.deepEqual(history.markers, ["US", "SG", "MO", "CN", "JP", "HK", "IN", "CA", "NL"]
+    .map(code => coordinates[code].slice(0, 2)), "Restore all nine known locations, skip unknown XX");
+  assert.equal(history.nodes["visitor-map-count"].textContent, "13", "Location totals must not replace the independent page-view counter");
+  const manyCountries = Object.keys(coordinates).filter(code => /^[A-Z]{2}$/.test(code)).slice(0, 50);
+  const fullMap = await run({ countryStats: { countries: manyCountries.map(country_code => ({ country_code, count: 1 })) } });
+  assert.equal(fullMap.markers.length, 50, "Do not impose a top-country display limit");
+  const malformed = await run({ countryStats: { visits: [] } });
+  assert.match(malformed.nodes["visitor-map-status"].textContent, /unavailable/);
+  assert.match((await run()).nodes["visitor-map-status"].textContent, /No visitor locations recorded/);
 
   const live = await run({ hostname: "xiangjie-kong.github.io", geoStatus: 403 });
   assert.equal(live.nodes["visitor-map-count"].textContent, "14", "FeedPulse rejection must not freeze the counter at 13");
@@ -98,5 +116,5 @@ const hits = result => result.calls.filter(c => c.url.includes("/hit/"));
   const noMap = await run({ leaflet: false });
   assert.equal(noMap.nodes["visitor-map-count"].textContent, "13");
   assert.match(noMap.nodes["visitor-map"].textContent, /could not load/);
-  console.log("PASS: FeedPulse 403 isolation; one increment per load; read-only polling; hidden-tab pause; failure recovery; no uncertain write retries; safe map locations.");
+  console.log("PASS: all-time historical countries without display limits; safe map locations; FeedPulse 403 isolation; one increment per load; read-only polling; failure recovery; no uncertain write retries.");
 })().catch(error => { console.error(error); process.exitCode = 1; });

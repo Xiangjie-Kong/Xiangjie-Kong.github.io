@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am an MPhil student at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/). I received my B.S. in Computer Science from [Macau University of Science and Technology](https://www.must.edu.mo/). During my undergraduate studies, I worked in the Phase Field-Computational Fluids team under the supervision of [Prof. Junxiang Yang](https://cfdyang521.github.io/) in the Faculty of Innovation Engineering, focusing on **3D Volume Reconstruction** and **Scientific Computing**.
+I am an MPhil student at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/), under the supervision of [Prof. Zhiqing Hong](https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=659) (Prime Supervisor, Internet of Things Thrust) and [Prof. Yutao Yue](https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=401) (Co-supervisor, Artificial Intelligence Thrust), both in the Information Hub.
+
+I received my B.S. in Computer Science from [Macau University of Science and Technology](https://www.must.edu.mo/). During my undergraduate studies, I worked in the Phase Field-Computational Fluids team under the supervision of [Prof. Junxiang Yang](https://cfdyang521.github.io/) in the Faculty of Innovation Engineering, focusing on **3D Volume Reconstruction** and **Scientific Computing**.
 
 <section class="home-news" aria-labelledby="news-heading">
   <h2 id="news-heading"><span aria-hidden="true">🔥</span> News</h2>
@@ -33,9 +35,9 @@ I am an MPhil student at [The Hong Kong University of Science and Technology (Gu
 
 <section class="visitor-map" aria-labelledby="visitor-map-heading">
   <h2 id="visitor-map-heading">Global Visitor Map</h2>
-  <div id="visitor-map" class="visitor-map__canvas" aria-label="Interactive map of recent visitor countries and regions" data-site-id="bc8eec62-85f7-44af-98dd-4e4e894105ab">Loading visitor map…</div>
+  <div id="visitor-map" class="visitor-map__canvas" aria-label="Interactive map of all-time visitor countries and regions" data-site-id="bc8eec62-85f7-44af-98dd-4e4e894105ab">Loading visitor map…</div>
   <p class="visitor-map__total" aria-live="polite"><strong id="visitor-map-count">—</strong> <span id="visitor-count-label">page views since September 2026</span></p>
-  <p class="visitor-map__caption"><span id="visitor-map-status">Past 24 hours · approximate country/region locations.</span> <a href="https://feed-pulse.com/site/xiangjie-kong.github.io/traffic" target="_blank" rel="noopener">Stats by FeedPulse</a></p>
+  <p class="visitor-map__caption"><span id="visitor-map-status">All time · approximate country/region locations.</span> <a href="https://feed-pulse.com/site/xiangjie-kong.github.io/traffic" target="_blank" rel="noopener">Stats by FeedPulse</a></p>
   <noscript><p>Enable JavaScript to view the interactive visitor map.</p></noscript>
 </section>
 

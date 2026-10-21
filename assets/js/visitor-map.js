@@ -90,27 +90,26 @@
     }
 
     const [locations, centers] = await Promise.allSettled([
-      read(`${api}/widget/traffic/${site}?limit=400&include_bots=0`),
+      read(`${api}/widget/flags/${site}?include_bots=0`),
       read("/assets/data/visitor-countries.json")
     ]);
-    if (locations.status !== "fulfilled" || !Array.isArray(locations.value?.visits) ||
+    if (locations.status !== "fulfilled" || !Array.isArray(locations.value?.countries) ||
         centers.status !== "fulfilled" || !centers.value || typeof centers.value !== "object") {
       status.textContent = "Visitor locations are temporarily unavailable.";
       return;
     }
     const countries = new Map();
-    const now = Date.now();
-    // ponytail: latest 400 visits within 24 hours; add archival storage if needed.
-    locations.value.visits.forEach(visit => {
-      if (!visit || visit.is_bot || !/^[A-Z]{2}$/.test(visit.country_code)) return;
-      const age = now - Date.parse(visit.created_at);
-      const point = centers.value[visit.country_code];
-      if (!Number.isFinite(age) || age < 0 || age > 86400000 || !Array.isArray(point) ||
+    // The flag endpoint aggregates all-time countries; traffic only returns recent visits.
+    locations.value.countries.forEach(country => {
+      if (!country || !/^[A-Z]{2}$/.test(country.country_code) ||
+          !Number.isSafeInteger(country.count) || country.count <= 0) return;
+      const point = centers.value[country.country_code];
+      if (!Array.isArray(point) ||
           !Number.isFinite(point[0]) || Math.abs(point[0]) > 90 ||
           !Number.isFinite(point[1]) || Math.abs(point[1]) > 180 || typeof point[2] !== "string") return;
-      countries.set(visit.country_code, point);
+      countries.set(country.country_code, point);
     });
-    status.textContent = countries.size ? "Past 24 hours · approximate country/region locations." : "No recent visitor locations yet.";
+    status.textContent = countries.size ? "All time · approximate country/region locations." : "No visitor locations recorded yet.";
     if (locationUnconfirmed) status.textContent += " Some locations are unavailable.";
     if (!map) return;
     const icon = L.divIcon({ className: "visitor-map__dot", iconSize: [8, 8] });
