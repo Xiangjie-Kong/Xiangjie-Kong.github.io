@@ -20,7 +20,7 @@ I received my B.S. in Computer Science from [Macau University of Science and Tec
     <li><em>2026.07</em> Awarded <strong>First Class Honors</strong> at Macau University of Science and Technology.</li>
     <li><em>2025.11</em> Our <a href="https://doi.org/10.1016/j.camwa.2025.11.009">paper on Lagrange multiplier methods for 3D reconstruction</a> was accepted by <strong>Computers &amp; Mathematics with Applications</strong>.</li>
     <li><em>2025.06</em> Our <a href="https://doi.org/10.1016/j.cnsns.2025.109104">paper on an energy-stable leap-frog scheme</a> was accepted by <strong>Communications in Nonlinear Science and Numerical Simulation</strong>.</li>
-    <li><em>2025.6</em> Placed <strong>15th in the World Finals</strong> of the <strong>Tencent AI Arena Global Open Competition</strong>, Intelligent Agent Gaming Algorithm Track.</li>
+    <li><em>2025.06</em> Placed <strong>15th in the World Finals</strong> of the <strong>Tencent AI Arena Global Open Competition</strong>, Intelligent Agent Gaming Algorithm Track.</li>
     <li><em>2025.04</em> Our <a href="https://doi.org/10.3390/s25082464">Mamba U-Net paper on low-light image reconstruction</a> was accepted by <strong>Sensors</strong>.</li>
     <li><em>2025.03</em> Our <a href="https://doi.org/10.1016/j.camwa.2025.03.022">paper on a BDF2 method for 3D shell reconstruction</a> was accepted by <strong>Computers &amp; Mathematics with Applications</strong>.</li>
     <li><em>2025.02</em> My <strong>first-author</strong> <a href="https://doi.org/10.1016/j.cnsns.2025.108649">paper on auxiliary variable methods for 3D volume reconstruction</a> was accepted by <strong>Communications in Nonlinear Science and Numerical Simulation</strong>. Congratulations! 🎉</li>
