@@ -26,7 +26,7 @@ I received my B.S. in Computer Science from [Macau University of Science and Tec
     <li><em>2025.02</em> My <strong>first-author</strong> <a href="https://doi.org/10.1016/j.cnsns.2025.108649">paper on auxiliary variable methods for 3D volume reconstruction</a> was accepted by <strong>Communications in Nonlinear Science and Numerical Simulation</strong>. Congratulations! 🎉</li>
     <li><em>2024.12</em> Our paper <a href="https://doi.org/10.1016/j.camwa.2024.12.016">Semi-analytical algorithm for quasicrystal patterns</a> was accepted by <strong>Computers &amp; Mathematics with Applications</strong>.</li>
     <li><em>2024.09</em> Named to the <strong>Dean's Honor List</strong> for the 2023/2024 academic year.</li>
-    <li><em>2024.8</em> Won the <strong>Provincial Second Prize</strong> in the <strong>14th National College Students' E-Commerce Challenge</strong> (Innovation, Creativity and Entrepreneurship).</li>
+    <li><em>2024.08</em> Won the <strong>Provincial Second Prize</strong> in the <strong>14th National College Students' E-Commerce Challenge</strong> (Innovation, Creativity and Entrepreneurship).</li>
     <li><em>2024.06</em> Joined <strong>Inspur</strong> as a <strong>Software Engineer Intern</strong>, working on intelligent healthcare.</li>
     <li><em>2023.06</em> Joined <strong>Shandong Taiwei Digital Software Co.</strong> as a <strong>Software Engineer Intern</strong>, working on low-code development.</li>
   </ul>
