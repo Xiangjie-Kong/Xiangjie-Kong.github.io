@@ -9,7 +9,7 @@ redirect_from:
 
 I am an MPhil student in the Internet of Things (IoT) Thrust at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/), under the supervision of [Prof. Zhiqing Hong](https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=659) (Prime Supervisor, Internet of Things Thrust) and [Prof. Yutao Yue](https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=401) (Co-supervisor, Artificial Intelligence Thrust), both in the Information Hub.
 
-I received my B.S. in Computer Science from [Macau University of Science and Technology](https://www.must.edu.mo/). During my undergraduate studies, I worked in the Phase Field-Computational Fluids team under the supervision of [Prof. Junxiang Yang](https://cfdyang521.github.io/) in the Faculty of Innovation Engineering, focusing on **3D Volume Reconstruction** and **Scientific Computing**.
+Before joining HKUST(GZ), I received my B.S. in Computer Science from [Macau University of Science and Technology](https://www.must.edu.mo/). During my undergraduate studies, I worked in the Phase Field-Computational Fluids team under the supervision of [Prof. Junxiang Yang](https://cfdyang521.github.io/) in the Faculty of Innovation Engineering, focusing on **3D Volume Reconstruction** and **Scientific Computing**.
 
 <section class="home-news" aria-labelledby="news-heading">
   <h2 id="news-heading"><span aria-hidden="true">🔥</span> News</h2>
