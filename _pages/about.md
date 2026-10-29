@@ -13,8 +13,6 @@ Before joining HKUST(GZ), I received my B.S. in Computer Science from [Macau Uni
 
 <section class="home-news" aria-labelledby="news-heading">
   <h2 id="news-heading"><span aria-hidden="true">🔥</span> News</h2>
-  <!-- Keep newest items first. Dates follow the existing Publications and CV entries;
-       publication acceptance dates and missing graduation/award months need confirmation. -->
   <ul>
     <li><em>2026.08</em> Named to the <strong>Dean's Honor List</strong> for the 2025/2026 academic year.</li>
     <li><em>2026.07</em> Awarded <strong>First Class Honors</strong> at Macau University of Science and Technology.</li>
