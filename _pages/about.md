@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an MPhil student in the Internet of Things (IoT) Thrust at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/), under the supervision of [Prof. Zhiqing Hong](https://robinhong1.github.io/) (Prime Supervisor, Internet of Things Thrust) and [Prof. Yutao Yue](https://yutaoyue.github.io/) (Co-supervisor, Artificial Intelligence Thrust), both in the Information Hub.
+I am an MPhil student in the IoT Thrust at [The Hong Kong University of Science and Technology (Guangzhou)](https://hkust-gz.edu.cn/), under the supervision of [Prof. Zhiqing Hong](https://robinhong1.github.io/) (Prime Supervisor, IoT Thrust) in HAI Lab and [Prof. Yutao Yue](https://yutaoyue.github.io/) (Co-supervisor, AI Thrust) in <a href="https://di2lab.net">DI² Lab</a>, both in the Information Hub.
 
 Before joining HKUST(GZ), I received my B.S. in Computer Science from [Macau University of Science and Technology](https://www.must.edu.mo/). During my undergraduate studies, I worked in the Phase Field-Computational Fluids team under the supervision of [Prof. Junxiang Yang](https://cfdyang521.github.io/) in the Faculty of Innovation Engineering, focusing on **3D Volume Reconstruction** and **Scientific Computing**.
 
